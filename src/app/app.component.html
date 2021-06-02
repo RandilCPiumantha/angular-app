@@ -1,0 +1,69 @@
+<ul class="nav nav-pills">
+  <li class="nav-item">
+    <a
+      [class.active]="viewMode == 'map'"
+      class="nav-link"
+      href="#"
+      (click)="viewMode = 'map'"
+      >Map View</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      [class.active]="viewMode == 'list'"
+      class="nav-link"
+      href="#"
+      (click)="viewMode = 'list'"
+      >List View</a
+    >
+  </li>
+</ul>
+<div [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'map'">Map View Content</div>
+  <div *ngSwitchCase="'list'">List View Content</div>
+  <div *ngSwitchDefault>Otherviese</div>
+</div>
+
+<!-- <div *ngIf="courses.length > 0; then coursesList; else noCourses"></div>
+<ng-template #coursesList>list of course</ng-template>
+<ng-template #noCourses>No courses yet</ng-template> -->
+
+<!-- <like [likesCount] = "tweet.likesCount"
+      [isActive] = "tweet.isLiked">
+</like> -->
+<!-- <bootsrap-panel>
+  <ng-container class="heading">Heading</ng-container>
+  <ng-container class="body">
+    <h2>Body</h2>
+    <p>Some content here...</p>
+  </ng-container>
+</bootsrap-panel> -->
+<!-- <favorite [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)" ></favorite> -->
+<!-- <input type="text" [(ngModel)]="title" />
+<br />
+{{ title | titleCase }} -->
+
+<!-- <authors></authors> -->
+
+<!-- <nav class="navbar navbar-light bg-light">
+  <a href="" class="navbar-brand mr-auto" href="#">Blockchains Polls</a>
+  <button
+    type="button"
+    class="btn btn-secondary"
+    (click)="showForm = !showForm"
+  >
+    Create Poll
+  </button>
+</nav>
+
+<section class="jumporton bg-light text-center">
+  <h1>Polls Rethinked</h1>
+  <p class="lead text-muted">Powerd By Blockchain</p>
+</section>
+
+<app-poll-create *ngIf="showForm"></app-poll-create>
+
+<div class="d-flex">
+  <div class="container poll-list"><app-poll></app-poll></div>
+  <div class="container poll-detail">Detail</div>
+</div> -->
